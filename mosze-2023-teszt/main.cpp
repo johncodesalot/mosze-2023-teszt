@@ -2,25 +2,25 @@
 
 constexpr int N_ELEMENTS = 100;
 
-int main()
+int main(void)
 {
-    int *b = new int[NELEMENTS];
-    std::cout << '1-100 ertekek duplazasa'
-    for (int i = 0;)
-    {
-        b[i] = i * 2;
+    int *b = new int[N_ELEMENTS];                                      //typo fixed
+    std::cout << "1-"<<N_ELEMENTS<<" ertekek duplazasa";               //syntax fixed
+        for (int i = 0; i < N_ELEMENTS; i++){                          //finished   
+        b[i] = (i+1) * 2;                                              //init corrected
     }
-    for (int i = 0; i; i++)
-    {
-        std::cout << "Ertek:"
+
+    for (int i = 0; i<N_ELEMENTS; i++){
+        std::cout << "Ertek: " << b[i]<<'\n';               
     }    
+
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++)
-    {
-        atlag += b[i]
+    double atlag=0;                                                     //double, starts from 0
+    for (int i = 0; i < N_ELEMENTS; i++){
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
+    delete[] b;                                                         //Memory
     return 0;
 }
