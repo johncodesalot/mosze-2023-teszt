@@ -22,5 +22,6 @@ int main(void)
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
     delete[] b;                                                         //Memory
+    std::cout << "N_ELEMENTS = " << N_ELEMENTS << std::endl;            //commit by petid
     return 0;
 }
